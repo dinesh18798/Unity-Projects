@@ -1,0 +1,160 @@
+﻿using Cinemachine;
+using System;
+using System.Collections.Generic;
+using System.Text.RegularExpressions;
+using TMPro;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class MainGameController : MonoBehaviour
+{
+    [SerializeField]
+    private List<PlayerCharacterPrefab> playerCharacterPrefabs;
+
+    [SerializeField]
+    private TextMeshProUGUI coinText;
+
+    [SerializeField]
+    private GameObject houseBuilding;
+
+    [SerializeField]
+    private List<GameObject> appliancesPrefabs;
+
+    private GameObject playerGameObject;
+    private SceneChanger sceneChanger;
+    
+    //Enable to test loading from main scene directly
+    //private LoadFromXML loadAppliances;
+
+    private void Awake()
+    {
+        PlayerCharacterCreation();
+        //LoadGameData();
+    }
+
+    void Start()
+    {
+        GameObject sceneChangerObject = GameObject.FindWithTag("SceneChanger");
+        if (sceneChangerObject != null)
+        {
+            sceneChanger = sceneChangerObject.GetComponent<SceneChanger>();
+        }
+
+        //LoadPlayerData();
+        UpdateCoins();
+        UpdateAppliances();
+    }
+    
+    /*
+    private void LoadGameData()
+    {
+        //-- Load all appliances
+        loadAppliances = new LoadFromXML();
+        loadAppliances.LoadAllAppliances();
+        loadAppliances.LoadAllUtilities();
+    }
+    */
+    
+    public PlayerData PlayerData { get; private set; }
+
+    private void PlayerCharacterCreation()
+    {
+        //--Create Character
+        GameObject tempPrefab = playerCharacterPrefabs[PlayerInfo.PlayerCharacterID].characterPrefab;
+        playerGameObject = Instantiate(tempPrefab) as GameObject;
+    }
+
+    private void UpdateCoins()
+    {
+        coinText.text = String.Format("Coins: {0}", PlayerInfo.Coins);
+    }
+
+    private void UpdateAppliances()
+    {
+        foreach (KeyValuePair<string, ApplianceInfo> appliance in PlayerInfo.PurchasedAppliances)
+        {
+            string appliancesType = Regex.Replace(appliance.Key, @"\s+", "");
+            GameObject gameObject = GameObject.Find(appliancesType);
+            if (appliancesType != "LightBulb")
+            {
+                if (gameObject == null)
+                {
+                    foreach (GameObject prefab in appliancesPrefabs)
+                    {
+                        if (prefab.CompareTag(appliancesType))
+                        {
+                            GameObject go = Instantiate(prefab) as GameObject;
+                            go.transform.parent = houseBuilding.transform;
+                            break;
+                        }
+                    }
+
+                }
+                else if (!gameObject.activeInHierarchy)
+                    gameObject.SetActive(true);
+            }
+        }
+    }
+
+    public void LoadStoreScene()
+    {
+        sceneChanger.FadeToScene(SceneManagerController.Scenes.STORE);
+    }
+
+    public void LoadGameCentreScene()
+    {
+        sceneChanger.FadeToScene(SceneManagerController.Scenes.GAMECENTRE);
+    }
+
+    public void LoadPlayerData()
+    {
+        PlayerData playerData = SaveAndLoadManager.LoadPlayerData();
+        if (playerData != null) UpdatePlayerInfo(playerData);
+    }
+
+    private void UpdatePlayerInfo(PlayerData playerData)
+    {
+        if (playerData == null) return;
+
+        PlayerInfo.PlayerCharacterID = playerData.playerCharcterId;
+        PlayerInfo.PlayerName = playerData.playerName == null ? String.Empty : playerData.playerName;
+        PlayerInfo.Coins = playerData.coins;
+        PlayerInfo.PuzzleCurrentLevel = playerData.puzzleLevel;
+        PlayerInfo.QuizCurrentLevel = playerData.quizLevel;
+
+        try
+        {
+            foreach (AssetInfo asset in playerData.purchasedAppliancesInfos)
+            {
+                foreach (Appliance appliance in PlayerInfo.AllAppliancesList)
+                {
+                    if (asset.assetType == appliance.ApplianceType)
+                    {
+                        appliance.ApplianceCurrentLevel = asset.assetLevel;
+                        ApplianceInfo applianceInfo = appliance.ApplianceInfoList[asset.assetLevel - 1];
+                      if(!PlayerInfo.PurchasedAppliances.ContainsKey(appliance.ApplianceType))
+                            PlayerInfo.PurchasedAppliances.Add(appliance.ApplianceType, applianceInfo);
+                    }
+                }
+            }
+
+            foreach (AssetInfo asset in playerData.purchasedUtilitiesInfo)
+            {
+                foreach (Utility utility in PlayerInfo.AllUtilitiesList)
+                {
+                    if (asset.assetType == utility.UtilityType)
+                    {
+                        utility.UtilityCurrentLevel = asset.assetLevel;
+                        UtilityInfo utilityInfo = utility.UtilityInfoList[asset.assetLevel - 1];
+                        if (!PlayerInfo.PurchasedUtilities.ContainsKey(utility.UtilityType))
+                            PlayerInfo.PurchasedUtilities.Add(utility.UtilityType, utilityInfo);
+                    }
+                }
+            }
+        }
+        catch (Exception exp)
+        {
+            Debug.LogError("Unable to update game info" + exp.StackTrace);
+        }
+    }
+}

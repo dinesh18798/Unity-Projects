@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Utilities xmlns="http://tempuri.org/Utilities.xsd">
+    <UtilityItems>
+        
+        <UtilityItem>
+            <UtilityType>Solar Panel</UtilityType>
+            <UtilityInfo>
+                <UtilityLevel>1</UtilityLevel>
+                <UtilityPrice>200</UtilityPrice>
+                <UtilitySavingEnergy>0.25</UtilitySavingEnergy>
+                <UtilityEfficiency>40</UtilityEfficiency>
+                <UtilityMaterialType>p-SI</UtilityMaterialType>
+            </UtilityInfo>
+            <UtilityInfo>
+                <UtilityLevel>2</UtilityLevel>
+                <UtilityPrice>250</UtilityPrice>
+                <UtilitySavingEnergy>0.31</UtilitySavingEnergy>
+                <UtilityEfficiency>50</UtilityEfficiency>
+                <UtilityMaterialType>A-SI</UtilityMaterialType>
+            </UtilityInfo>
+            <UtilityInfo>
+                <UtilityLevel>3</UtilityLevel>
+                <UtilityPrice>300</UtilityPrice>
+                <UtilitySavingEnergy>0.36</UtilitySavingEnergy>
+                <UtilityEfficiency>55</UtilityEfficiency>
+                <UtilityMaterialType>CPV Cell</UtilityMaterialType>
+            </UtilityInfo>
+        </UtilityItem>
+
+        <UtilityItem>
+            <UtilityType>Window</UtilityType>
+            <UtilityInfo>
+                <UtilityLevel>1</UtilityLevel>
+                <UtilityPrice>200</UtilityPrice>
+                <UtilitySavingEnergy>0.15</UtilitySavingEnergy>
+                <UtilityEfficiency>38</UtilityEfficiency>
+                <UtilityMaterialType>Double Glazed</UtilityMaterialType>
+            </UtilityInfo>
+            <UtilityInfo>
+                <UtilityLevel>2</UtilityLevel>
+                <UtilityPrice>250</UtilityPrice>
+                <UtilitySavingEnergy>0.22</UtilitySavingEnergy>
+                <UtilityEfficiency>51</UtilityEfficiency>
+                <UtilityMaterialType>Double low-E</UtilityMaterialType>
+            </UtilityInfo>
+            <UtilityInfo>
+                <UtilityLevel>3</UtilityLevel>
+                <UtilityPrice>300</UtilityPrice>
+                <UtilitySavingEnergy>0.50</UtilitySavingEnergy>
+                <UtilityEfficiency>60</UtilityEfficiency>
+                <UtilityMaterialType>Triple low-E</UtilityMaterialType>
+            </UtilityInfo>
+        </UtilityItem>
+
+        <UtilityItem>
+            <UtilityType>Heater</UtilityType>
+            <UtilityInfo>
+                <UtilityLevel>1</UtilityLevel>
+                <UtilityPrice>200</UtilityPrice>
+                <UtilitySavingEnergy>0.345</UtilitySavingEnergy>
+                <UtilityEfficiency>57</UtilityEfficiency>
+                <UtilityMaterialType>Oil</UtilityMaterialType>
+            </UtilityInfo>
+            <UtilityInfo>
+                <UtilityLevel>2</UtilityLevel>
+                <UtilityPrice>250</UtilityPrice>
+                <UtilitySavingEnergy>0.45</UtilitySavingEnergy>
+                <UtilityEfficiency>68</UtilityEfficiency>
+                <UtilityMaterialType>Electricity</UtilityMaterialType>
+            </UtilityInfo>
+            <UtilityInfo>
+                <UtilityLevel>3</UtilityLevel>
+                <UtilityPrice>300</UtilityPrice>
+                <UtilitySavingEnergy>0.625</UtilitySavingEnergy>
+                <UtilityEfficiency>80</UtilityEfficiency>
+                <UtilityMaterialType>Gas</UtilityMaterialType>
+            </UtilityInfo>
+        </UtilityItem>
+
+        <UtilityItem>
+            <UtilityType>Ventilation System</UtilityType>
+            <UtilityInfo>
+                <UtilityLevel>1</UtilityLevel>
+                <UtilityPrice>200</UtilityPrice>
+                <UtilitySavingEnergy>0.25</UtilitySavingEnergy>
+                <UtilityEfficiency>38</UtilityEfficiency>
+                <UtilityMaterialType>Exhaust</UtilityMaterialType>
+            </UtilityInfo>
+            <UtilityInfo>
+                <UtilityLevel>2</UtilityLevel>
+                <UtilityPrice>200</UtilityPrice>
+                <UtilitySavingEnergy>0.31</UtilitySavingEnergy>
+                <UtilityEfficiency>47</UtilityEfficiency>
+                <UtilityMaterialType>Supply</UtilityMaterialType>
+            </UtilityInfo>
+            <UtilityInfo>
+                <UtilityLevel>3</UtilityLevel>
+                <UtilityPrice>200</UtilityPrice>
+                <UtilitySavingEnergy>0.36</UtilitySavingEnergy>
+                <UtilityEfficiency>53</UtilityEfficiency>
+                <UtilityMaterialType>Balanced</UtilityMaterialType>
+            </UtilityInfo>
+        </UtilityItem>
+
+        <UtilityItem>
+            <UtilityType>Loft Insulation</UtilityType>
+            <UtilityInfo>
+                <UtilityLevel>1</UtilityLevel>
+                <UtilityPrice>200</UtilityPrice>
+                <UtilitySavingEnergy>0.125</UtilitySavingEnergy>
+                <UtilityEfficiency>0</UtilityEfficiency>
+                <UtilityMaterialType>Loose-fill</UtilityMaterialType>
+            </UtilityInfo>
+            <UtilityInfo>
+                <UtilityLevel>2</UtilityLevel>
+                <UtilityPrice>250</UtilityPrice>
+                <UtilitySavingEnergy>0.195</UtilitySavingEnergy>
+                <UtilityEfficiency>0</UtilityEfficiency>
+                <UtilityMaterialType>Blown-fibre</UtilityMaterialType>
+            </UtilityInfo>
+            <UtilityInfo>
+                <UtilityLevel>3</UtilityLevel>
+                <UtilityPrice>300</UtilityPrice>
+                <UtilitySavingEnergy>0.275</UtilitySavingEnergy>
+                <UtilityEfficiency>0</UtilityEfficiency>
+                <UtilityMaterialType>Sheet</UtilityMaterialType>
+            </UtilityInfo>
+        </UtilityItem>
+
+        <UtilityItem>
+            <UtilityType>Wall Insulation</UtilityType>
+            <UtilityInfo>
+                <UtilityLevel>1</UtilityLevel>
+                <UtilityPrice>200</UtilityPrice>
+                <UtilitySavingEnergy>0.15</UtilitySavingEnergy>
+                <UtilityEfficiency>0</UtilityEfficiency>
+                <UtilityMaterialType>Rigid boards</UtilityMaterialType>
+            </UtilityInfo>
+            <UtilityInfo>
+                <UtilityLevel>2</UtilityLevel>
+                <UtilityPrice>250</UtilityPrice>
+                <UtilitySavingEnergy>0.26</UtilitySavingEnergy>
+                <UtilityEfficiency>0</UtilityEfficiency>
+                <UtilityMaterialType>Foam boards</UtilityMaterialType>
+            </UtilityInfo>
+            <UtilityInfo>
+                <UtilityLevel>3</UtilityLevel>
+                <UtilityPrice>300</UtilityPrice>
+                <UtilitySavingEnergy>0.38</UtilitySavingEnergy>
+                <UtilityEfficiency>0</UtilityEfficiency>
+                <UtilityMaterialType>Rigid boards</UtilityMaterialType>
+            </UtilityInfo>
+        </UtilityItem>
+        
+    </UtilityItems>
+</Utilities>

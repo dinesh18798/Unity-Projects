@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:tns="http://tempuri.org/Utilities.xsd"
+            targetNamespace="http://tempuri.org/Utilities.xsd"
+            elementFormDefault="qualified">
+
+    <xsd:complexType name="Info">
+        <xsd:sequence>
+            <xsd:element name="UtilityLevel" type="xsd:integer" />
+            <xsd:element name="UtilityPrice" type="xsd:integer" />
+            <xsd:element name="UtilitySavingEnergy" type="xsd:decimal" />
+            <xsd:element name="UtilityEfficiency" type="xsd:decimal" />
+            <xsd:element name="UtilityMaterialType" type="xsd:string" />
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name ="Type">
+        <xsd:sequence>
+            <xsd:element name="UtilityType" type="xsd:string" />
+            <xsd:element maxOccurs="5" name="UtilityInfo" type="tns:Info"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:element name="Utilities">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="UtilityItems">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element maxOccurs="unbounded" name="UtilityItem" type="tns:Type"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

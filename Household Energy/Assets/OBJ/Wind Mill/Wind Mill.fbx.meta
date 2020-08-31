@@ -1,0 +1,187 @@
+fileFormatVersion: 2
+guid: fd8bb2240b7eb3c42806d94b817d4878
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: cylinder84
+    100002: polymsh_detached129
+    100004: polymsh_detached130
+    100006: polymsh_detached131
+    100008: polymsh_detached132
+    100010: polymsh_detached133
+    100012: polymsh_detached134
+    100014: polymsh_detached135
+    100016: polymsh_detached136
+    100018: polymsh_extracted65
+    100020: polymsh_extracted66
+    100022: polymsh_extracted67
+    100024: polymsh_extracted71
+    100026: polymsh_extracted72
+    100028: //RootNode
+    400000: cylinder84
+    400002: polymsh_detached129
+    400004: polymsh_detached130
+    400006: polymsh_detached131
+    400008: polymsh_detached132
+    400010: polymsh_detached133
+    400012: polymsh_detached134
+    400014: polymsh_detached135
+    400016: polymsh_detached136
+    400018: polymsh_extracted65
+    400020: polymsh_extracted66
+    400022: polymsh_extracted67
+    400024: polymsh_extracted71
+    400026: polymsh_extracted72
+    400028: //RootNode
+    2100000: No Name
+    2100002: Material.003
+    2100004: Material.001
+    2100006: Material.002
+    2300000: cylinder84
+    2300002: polymsh_detached129
+    2300004: polymsh_detached130
+    2300006: polymsh_detached131
+    2300008: polymsh_detached132
+    2300010: polymsh_detached133
+    2300012: polymsh_detached134
+    2300014: polymsh_detached135
+    2300016: polymsh_detached136
+    2300018: polymsh_extracted65
+    2300020: polymsh_extracted66
+    2300022: polymsh_extracted67
+    2300024: polymsh_extracted71
+    2300026: polymsh_extracted72
+    3300000: cylinder84
+    3300002: polymsh_detached129
+    3300004: polymsh_detached130
+    3300006: polymsh_detached131
+    3300008: polymsh_detached132
+    3300010: polymsh_detached133
+    3300012: polymsh_detached134
+    3300014: polymsh_detached135
+    3300016: polymsh_detached136
+    3300018: polymsh_extracted65
+    3300020: polymsh_extracted66
+    3300022: polymsh_extracted67
+    3300024: polymsh_extracted71
+    3300026: polymsh_extracted72
+    4300000: polymsh_detached133
+    4300002: polymsh_extracted65
+    4300004: polymsh_detached131
+    4300006: polymsh_extracted72
+    4300008: polymsh_extracted71
+    4300010: polymsh_detached134
+    4300012: cylinder84
+    4300014: polymsh_detached136
+    4300016: polymsh_detached132
+    4300018: polymsh_detached135
+    4300020: polymsh_detached130
+    4300022: polymsh_extracted67
+    4300024: polymsh_extracted66
+    4300026: polymsh_detached129
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: 4525f006afcc7064ebb35b116ac849cd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.002
+    second: {fileID: 2100000, guid: b91ec7140ffb7a04ca9f2b80bc8ed41a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.003
+    second: {fileID: 2100000, guid: 9565c4c2bf85fd34cb35f1c30bc15e4e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: No Name
+    second: {fileID: 2100000, guid: b4d34683414ff154c8086806d2267ee9, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
